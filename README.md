@@ -46,7 +46,7 @@ In order to check whether Kafka is up and running, open command prompt in `<Extr
 bin\windows\kafka-topics.bat --list --zookeeper localhost:2181
 ```
 This will list down all topics present in Kafka server.
-![ListingKafkaTopics](https://raw.githubusercontent.com/contactsharmamohit/HelloKafka/master/Illustrations/ListingKafkaTopics.JPG)
+![ListingKafkaTopics](https://raw.githubusercontent.com/SDU-OpenSources/HelloKafka/master/Illustrations/ListingKafkaTopics.JPG)
 
 ### Creating a Topic
 Open command prompt in `<Extracted-Kafka-Path>\kafka_2.12-2.1.0\` and execute command:
@@ -56,7 +56,7 @@ For reference, Topic Name `HelloKafka` will be used in all below commands.
 ```CMD
 bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic HelloKafka
 ```
-![CreatingKafkaTopic](https://raw.githubusercontent.com/contactsharmamohit/HelloKafka/master/Illustrations/CreatingKafkaTopic.JPG)
+![CreatingKafkaTopic](https://raw.githubusercontent.com/SDU-OpenSources/HelloKafka/master/Illustrations/CreatingKafkaTopic.JPG)
 ## Hello World using CLI
 ### Starting Producer
 Open command prompt in `<Extracted-Kafka-Path>\kafka_2.12-2.1.0\` and execute command:
@@ -65,9 +65,9 @@ Below command will create a producer for topic specified in below command.
 bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic HelloKafka
 ```
 This will get you producer console for sending messages to topic.
-![StartingProducerCLI](https://raw.githubusercontent.com/contactsharmamohit/HelloKafka/master/Illustrations/StartingProducerCLI.JPG)
+![StartingProducerCLI](https://raw.githubusercontent.com/SDU-OpenSources/HelloKafka/master/Illustrations/StartingProducerCLI.JPG)
 Enter any message and hit enter. Get ready to get the entered message in Consumer console.
-![SendingMessageProducerCLI](https://raw.githubusercontent.com/contactsharmamohit/HelloKafka/master/Illustrations/SendingMessageProducerCLI.JPG)
+![SendingMessageProducerCLI](https://raw.githubusercontent.com/SDU-OpenSources/HelloKafka/master/Illustrations/SendingMessageProducerCLI.JPG)
 
 ### Starting Consumer
 Open command prompt in `<Extracted-Kafka-Path>\kafka_2.12-2.1.0\` and execute command:
@@ -76,28 +76,28 @@ Below command will create a consumer for topic specified in below command.
 bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic HelloKafka --from-beginning
 ```
 This will get you consumer console and show all messages related to topic.
-![StartingConsumerCLI](https://raw.githubusercontent.com/contactsharmamohit/HelloKafka/master/Illustrations/StartingConsumerCLI.JPG)
+![StartingConsumerCLI](https://raw.githubusercontent.com/SDU-OpenSources/HelloKafka/master/Illustrations/StartingConsumerCLI.JPG)
 
 Hello World using CLI is completed.
 
 ## Hello World using Java Client
 ### Project
-Create a project named [HelloKafka](https://github.com/contactsharmamohit/HelloKafka/tree/master/HelloKafka) in Eclipse and import files.
+Create a project named [HelloKafka](https://github.com/SDU-OpenSources/HelloKafka/tree/master/HelloKafka) in Eclipse and import files.
 Add all JARs present in `<Extracted-Kafka-Path>\kafka_2.12-2.1.0\libs` to build path of the project.
 
 ### Producer
-[MyProducer.java](https://github.com/contactsharmamohit/HelloKafka/blob/master/HelloKafka/src/hello/kafka/MyProducer.java) is the Source for Kafka Producer client implementation in Java.
+[MyProducer.java](https://github.com/SDU-OpenSources/HelloKafka/blob/master/HelloKafka/src/hello/kafka/MyProducer.java) is the Source for Kafka Producer client implementation in Java.
 Run the code and enter Topic name created in above steps and add a message. The message will be available in both CLI and Java Consumer.
 Refer below illustration for reference.
 
-![StartingConsumerCLI](https://raw.githubusercontent.com/contactsharmamohit/HelloKafka/master/Illustrations/ProducerConsoleJava.JPG)
+![StartingConsumerCLI](https://raw.githubusercontent.com/SDU-OpenSources/HelloKafka/master/Illustrations/ProducerConsoleJava.JPG)
 
 ### Consumer
-[MyConsumer.java](https://github.com/contactsharmamohit/HelloKafka/blob/master/HelloKafka/src/hello/kafka/MyConsumer.java) is the Source for Kafka Consumer client implementation in Java.
+[MyConsumer.java](https://github.com/SDU-OpenSources/HelloKafka/blob/master/HelloKafka/src/hello/kafka/MyConsumer.java) is the Source for Kafka Consumer client implementation in Java.
 Run the code and enter Topic name. The Consumer will now show all the messages related to the Topic from Kafka.
 Refer below illustration for reference.
 
-![ConsumerConsoleJava](https://raw.githubusercontent.com/contactsharmamohit/HelloKafka/master/Illustrations/ConsumerConsoleJava.JPG)
+![ConsumerConsoleJava](https://raw.githubusercontent.com/SDU-OpenSources/HelloKafka/master/Illustrations/ConsumerConsoleJava.JPG)
 
 Hello World using Java is completed.
 
@@ -111,4 +111,4 @@ bin\windows\zookeeper-server-stop.bat config/zookeeper.properties
 ```
 Please note that we are first stopping Kafka and then Zookeeper as Kafka is managed by Zookeeper hence it should be stopped before Zookeeper.
 
-![StoppingZookeperAndKafka](https://raw.githubusercontent.com/contactsharmamohit/HelloKafka/master/Illustrations/StoppingZookeperAndKafka.JPG)
+![StoppingZookeperAndKafka](https://raw.githubusercontent.com/SDU-OpenSources/HelloKafka/master/Illustrations/StoppingZookeperAndKafka.JPG)
