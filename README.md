@@ -73,7 +73,7 @@ Enter any message and hit enter. Get ready to get the entered message in Consume
 Open command prompt in `<Extracted-Kafka-Path>\kafka_2.12-2.1.0\` and execute command:
 Below command will create a consumer for topic specified in below command.
 ```CMD
-bin\windows\kafka-console-consumer.bat --zookeeper localhost:2181 --topic HelloKafka --from-beginning
+bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic HelloKafka --from-beginning
 ```
 This will get you consumer console and show all messages related to topic.
 ![StartingConsumerCLI](https://raw.githubusercontent.com/contactsharmamohit/HelloKafka/master/Illustrations/StartingConsumerCLI.JPG)
